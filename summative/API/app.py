@@ -5,10 +5,19 @@ from fastapi import FastAPI, HTTPException, status
 from pydantic import BaseModel, Field
 from fastapi.middleware.cors import CORSMiddleware
 import joblib as jb
+inport os
 
 # Load the tire wear model
-with open("../linear_regression/model/tire_wear_model.joblib", "rb") as file:
-    tire_wear_model = jb.load(file)
+# Load the tire wear model
+base_dir = os.path.dirname(os.path.abspath(_file_))  # Get the directory of app.py
+model_path = os.path.join(base_dir, "../linear_regression/model/tire_wear_model.joblib")
+
+# Load the tire wear model
+try:
+    with open(model_path, "rb") as file:
+        tire_wear_model = jb.load(file)
+except FileNotFoundError:
+    raise RuntimeError(f"Model file not found at {model_path}")
 
 # Create FastAPI instance
 app = FastAPI()
