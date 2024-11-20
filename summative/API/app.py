@@ -9,7 +9,7 @@ import os
 
 # Load the tire wear model
 # Load the tire wear model
-base_dir = os.path.dirname(os.path.abspath(_file_))  # Get the directory of app.py
+base_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of app.py
 model_path = os.path.join(base_dir, "../linear_regression/model/tire_wear_model.joblib")
 
 # Load the tire wear model
