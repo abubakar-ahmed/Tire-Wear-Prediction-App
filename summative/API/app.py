@@ -5,7 +5,7 @@ from fastapi import FastAPI, HTTPException, status
 from pydantic import BaseModel, Field
 from fastapi.middleware.cors import CORSMiddleware
 import joblib as jb
-inport os
+import os
 
 # Load the tire wear model
 # Load the tire wear model
