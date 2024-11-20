@@ -9,16 +9,13 @@ import os
 
 # Load the tire wear model
 # Load the tire wear model
-base_dir = os.path.dirname(os.path.abspath(__file__))  # Get the directory of app.py
-model_path = os.path.join(base_dir, "linear_regression/model/tire_wear_model.joblib")
-
-# Load the tire wear model
-try:
-    with open(model_path, "rb") as file:
-        tire_wear_model = jb.load(file)
-except FileNotFoundError:
+model_path = os.getenv("MODEL_PATH")
+if not model_path or not os.path.exists(model_path):
     raise RuntimeError(f"Model file not found at {model_path}")
 
+# Load the model
+with open(model_path, "rb") as file:
+    tire_wear_model = jb.load(file)
 # Create FastAPI instance
 app = FastAPI()
 
