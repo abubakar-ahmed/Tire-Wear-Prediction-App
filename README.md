@@ -16,6 +16,25 @@ Welcome to the **Tire Wear Predictor**, a machine learning-powered solution that
 Test the prediction API directly using Postman or any HTTP client.  
 **API Base URL**: https://tire-wear-prediction-app-4.onrender.com/predict
 
+Dummy JSON Script to use:
+
+{
+    "tire_compound_hard": 0,
+    "tire_compound_medium": 0,
+    "tire_compound_soft": 1,
+    "tire_compound_wet": 0,
+    "track_temperature": 30.2,
+    "laps_driven": 56,
+    "car_weight": 800,
+    "track_surface_rough": 0,
+    "track_surface_smooth": 1,
+    "driving_style_aggressive": 0,
+    "driving_style_balanced": 1,
+    "driving_style_conservative": 0,
+    "weather_dry": 0,
+    "weather_wet": 1
+}
+
 ---
 
 ##  **How to Run the Flutter App**
