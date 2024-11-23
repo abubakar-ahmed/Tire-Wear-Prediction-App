@@ -18,6 +18,7 @@ Test the prediction API directly using Postman or any HTTP client.
 
 Dummy JSON Script to use:
 
+```bash
 {
     "tire_compound_hard": 0,
     "tire_compound_medium": 0,
@@ -34,6 +35,7 @@ Dummy JSON Script to use:
     "weather_dry": 0,
     "weather_wet": 1
 }
+```
 
 ---
 
