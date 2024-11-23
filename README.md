@@ -7,7 +7,7 @@ Welcome to the **Tire Wear Predictor**, a machine learning-powered solution that
 ##  **Project Features**
 - **Machine Learning Model**
 - **FastAPI**
-- **Flutter App**:
+- **Flutter App**
 
 
 ---
